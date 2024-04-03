@@ -135,13 +135,12 @@ const SubmitData = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <ScrollView>
+      <ScrollView contentContainerStyle={{paddingBottom: 10}} showsVerticalScrollIndicator={false} >
         <View style={{ aspectRatio: aspectRatio }}>
         <Image style={{aspectRatio: aspectRatio, resizeMode:'contain', }} source={{ uri: data?.xt_image }} />
 
         </View>
 
-        <KeyboardAvoidingView behavior='padding'>
           <View style={[styles.InputContainer]}>
             <View style={styles.innerView}>
               <AppIcon
@@ -246,12 +245,11 @@ const SubmitData = () => {
 
             </View>
           </View>
-        </KeyboardAvoidingView>
 
         <AppButton
           loaderColor={AppColor.WHITE}
           backgroundColor={AppColor.DARK_BLUE}
-          title={'Load More'}
+          title={'Submit'}
           textStyle={{ color: AppColor.WHITE, fontSize: 17 }}
           Indicator={btnLoading}
           onPress={() => handleSubmit()}
